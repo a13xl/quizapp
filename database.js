@@ -22,7 +22,8 @@ let questions = [
         'question': 'Wer gilt als erste/r Ersteller/in von Computerprogrammen?',
         'answers': ['Steve Wozniak', 'Joan Clarke', 'Ada Lovelace', 'Dennis Ritchie'],
         'right_answer': 3,
-        'answerDescription': ''
+        'answerDescription': `Mitte des 19. Jahrhunderts war die Erkenntnis, dass die Maschine mehr als nur Zahlen verarbeiten könnte, bahnbrechend.<br>
+            <b>Ada Lovelace</b> legte in ihren Aufzeichnungen und in der Veröffentlichung auch ein konkretes Programm für die Maschine am Beispiel der Berechnung von Bernoulli-Zahlen vor. Daher gilt sie manchen Historikern als erste Programmiererin der Welt.`
     },
     {
         'question': 'Welche Programmiersprache gibt es <b>nicht</b>?',
