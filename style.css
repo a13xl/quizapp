@@ -1,10 +1,13 @@
 body {
     background-color: #104987 !important;
+    background-image: url(./img/background.jpg);
+    background-size: cover;
+    overflow: hidden;
 }
 
 .container {
     min-height: 100vh;
-    background-color: #104987 !important;
+    background-color: transparent !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,18 +17,51 @@ body {
     color: white;
 }
 
+.answerCard {
+    gap: 0.4rem;
+}
+
 .quiz-card {
     width: 30rem;
+}
+
+.quiz-card img {
+    height: 120px;
+    object-fit: cover;
 }
 
 .card-answer-option {
     background-color: #6c757d !important;
 }
 
+.card-answer-option-hover:hover {
+    cursor: pointer;
+    background-color: #5c636a !important;
+}
+
 .question-footer {
-    border-top: 1px solid rgba(108, 117, 125, 0.4);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-top: 1px solid rgba(108, 117, 125, 0.4);
     padding-top: 12px;
+}
+
+.icon {
+    height: 40px !important;
+    cursor: pointer;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.progress {
+    margin-bottom: 12px;
+}
+
+/* ========== END CARD ========== */
+.endCardBody img{
+    height: 100px;
+    width: 103px;
 }
