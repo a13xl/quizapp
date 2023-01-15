@@ -1,5 +1,7 @@
 let questionNr = 0;
 let rightAnswer = 0;
+let AUDIO_SUCCESS = new Audio('./audio/success.mp3');
+let AUDIO_FAIL = new Audio('./audio/Zonk-sound.mp3');
 
 function init() {
     document.getElementById('lastSite').innerHTML = questions.length;
@@ -42,9 +44,11 @@ function answer(qstNr ,answerNr) {
     if(answerNr == questions[qstNr].right_answer) { // richtige Antwort
         rightAnswer++;
         document.getElementById(`answer${answerNr}`).classList.add('bg-success');
+        AUDIO_SUCCESS.play();
     } else { // falsche Antwort
         document.getElementById(`answer${answerNr}`).classList.add('bg-danger');
         document.getElementById(`answer${questions[qstNr].right_answer}`).classList.add('bg-success');
+        AUDIO_FAIL.play();
     }
 
     document.getElementById('nextQuestion').disabled = false; // Button nächste Frage aktivieren
@@ -66,7 +70,6 @@ function nextQuestion() {
     questionNr++;
 
     if(questionNr >= questions.length){
-        changeProgressbar();
         opnEndScreen();
     } else {
         document.getElementById('nextQuestion').disabled = true;
@@ -77,16 +80,10 @@ function nextQuestion() {
 
 function changeProgressbar() {
     let progressBar = document.getElementById('progressBar');
-    let progress = questionNr / questions.length * 100;
+    let progress = (questionNr + 1) / questions.length * 100;
     progress = Math.round(progress);
     progressBar.innerHTML = `${progress}%`;
     progressBar.style = `width: ${progress}%;`;
-}
-
-function home() {
-    questionNr = 0;
-    rightAnswer = 0;
-    window.location = './index.html';
 }
 
 // ========== ANSWER INFO ==========
@@ -119,4 +116,10 @@ function opnEndCard() {
 
 function endResult() {
     document.getElementById('endResult').innerHTML = `<br>Du hast ${rightAnswer}<br>von ${questions.length}<br>Fragen richtig.`;
+}
+
+function home() {
+    questionNr = 0;
+    rightAnswer = 0;
+    window.location = './index.html';
 }

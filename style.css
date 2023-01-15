@@ -47,6 +47,14 @@ body {
     padding-top: 12px;
 }
 
+.question-footer-btn {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30%;
+}
+
 .icon {
     height: 40px !important;
     cursor: pointer;
@@ -61,7 +69,43 @@ body {
 }
 
 /* ========== END CARD ========== */
+.endCardBody {
+    margin-bottom: 30px;
+}
+
 .endCardBody img{
     height: 100px;
     width: 103px;
+}
+
+@media (max-width: 400px) {
+    body {
+        background-image: unset;
+    }
+
+    .container {
+        --bs-gutter-x: 0 !important;
+    }
+
+    .answer-info {
+        height: 50%;
+        overflow-y: auto;
+    }
+
+    .quiz-card {
+        height: 100vh !important;
+    }
+
+    .question-footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .question-footer-btn {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 29%;
+    }
 }

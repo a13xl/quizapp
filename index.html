@@ -46,14 +46,14 @@
                 </div>
 
                 <div class="question-footer justify-content-center">
-                    <button class="btn btn-secondary rounded" onclick="home()"><img src="./icons/home.png" alt="Home" class="icon"></button>
+                    <button title="Neustarten" class="btn btn-secondary rounded" onclick="home()"><img src="./icons/restart.png" alt="Restart" class="icon"></button>
                 </div>
             </div>
 
             <!-- ========== CURRENT ANSWER INFO ========== -->
             <div id="infoCard" class="card-body" style="display: none;">
                 <h5 class="card-title">INFO</h5>
-                <div id="answerInfo"></div>
+                <div id="answerInfo" class="answer-info"></div>
 
                 <div class="question-footer">
                     <img src="./icons/back.png" alt="Back" class="icon" onclick="closeInfo()">
@@ -70,11 +70,15 @@
                 <div id="answer" class="card answerCard mb-2 bg-dark"></div>
 
                 <div class="question-footer">
-                    <span>
-                        <b id="currentSite"></b> von <b id="lastSite"></b> Fragen
-                    </span>
-                    <img id="answerInfoBtn" src="./icons/info.png" alt="Info" class="icon" style="display: none;" onclick="openInfo()">
-                    <button id="nextQuestion" class="btn btn-secondary rounded" disabled onclick="nextQuestion()">Nächste Frage</button>
+                    <div>
+                        <span>
+                            <b id="currentSite"></b> von <b id="lastSite"></b> Fragen
+                        </span>
+                    </div>
+                    <div class="question-footer-btn">
+                        <img id="answerInfoBtn" src="./icons/info.png" alt="Info" class="icon" style="display: none;" onclick="openInfo()">
+                        <button id="nextQuestion" class="btn btn-secondary rounded" disabled onclick="nextQuestion()">Nächste Frage</button>
+                    </div>
                 </div>
             </div>
 
