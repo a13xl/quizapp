@@ -8,7 +8,7 @@ function init() {
     document.getElementById('lastSiteInfo').innerHTML = questions.length;
     showQuestion();
     showAnswer();
-    changeProgressbar();
+    updateProgressbar();
 }
 
 function showQuestion() {
@@ -42,17 +42,25 @@ function answer(qstNr ,answerNr) {
     disableAnswers();
 
     if(answerNr == questions[qstNr].right_answer) { // richtige Antwort
-        rightAnswer++;
-        document.getElementById(`answer${answerNr}`).classList.add('bg-success');
-        AUDIO_SUCCESS.play();
+        answerRight(answerNr);
     } else { // falsche Antwort
-        document.getElementById(`answer${answerNr}`).classList.add('bg-danger');
-        document.getElementById(`answer${questions[qstNr].right_answer}`).classList.add('bg-success');
-        AUDIO_FAIL.play();
+        answerFalse(answerNr, qstNr);
     }
 
     document.getElementById('nextQuestion').disabled = false; // Button nächste Frage aktivieren
     document.getElementById('answerInfoBtn').style = '';
+}
+
+function answerRight(answerNr) {
+    rightAnswer++;
+    document.getElementById(`answer${answerNr}`).classList.add('bg-success');
+    AUDIO_SUCCESS.play();
+}
+
+function answerFalse(answerNr, qstNr) {
+    document.getElementById(`answer${answerNr}`).classList.add('bg-danger');
+    document.getElementById(`answer${questions[qstNr].right_answer}`).classList.add('bg-success');
+    AUDIO_FAIL.play();
 }
 
 function disableAnswers() {
@@ -78,7 +86,7 @@ function nextQuestion() {
     }
 }
 
-function changeProgressbar() {
+function updateProgressbar() {
     let progressBar = document.getElementById('progressBar');
     let progress = (questionNr + 1) / questions.length * 100;
     progress = Math.round(progress);
