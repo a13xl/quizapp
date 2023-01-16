@@ -9,8 +9,6 @@
     <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="417de3f2-6372-46e8-bf94-5023e37b0a52" data-blockingmode="auto" type="text/javascript"></script>
     -->
 
-    <title>QuizApp</title>
-
     <link rel="icon" type="image/x-icon" href="./icons/question.png">
     <link rel="stylesheet" href="./style.css">
     <!-- Bootstrap -->
@@ -27,6 +25,7 @@
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
         <span class="navbar-brand mb-0 h1">QuizApp</span>
+        <span style="cursor: pointer; color: white;" onclick="opnImpressum()">Impressum</span>
         </div>
     </nav>
 
@@ -35,6 +34,23 @@
             <img src="./img/card-top.jpg" class="card-img-top rounded-top">
             <div class="progress bg-dark">
                 <div id="progressBar" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">0%</div>
+            </div>
+
+            <!-- ========== IMPRESSUM ========== -->
+            <div id="impressum" class="impressum card-body" style="display: none;">
+                <h5 class="card-title" style="margin-bottom: 10%;">IMPRESSUM</h5>
+                <div class="answer-info" style="margin-bottom: 30%;">
+                    <p>Angaben gemäß § 5 TMG</p><p>Alexander Lovasz <br> 
+                    Gärtnerweg 1<br> 
+                    83329 Waging am See <br> <br></p>
+                    <p><strong>Kontakt:</strong> <br>
+                    Telefon: <a href="tel: 08681 4790 946">08681 4790 946</a><br>
+                    E-Mail: <a href='mailto:general01@tuta.io'>general01@tuta.io</a></p>
+                </div>
+
+                <div class="question-footer">
+                    <img src="./icons/back.png" alt="Back" class="icon" onclick="closeImpressum()">
+                </div>
             </div>
 
             <!-- ========== END CARD ========== -->

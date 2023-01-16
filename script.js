@@ -131,3 +131,12 @@ function home() {
     rightAnswer = 0;
     window.location = './index.html';
 }
+
+// ========== IMPRESSUM ==========
+function opnImpressum() {
+    document.getElementById('impressum').style = '';
+}
+
+function closeImpressum() {
+    document.getElementById('impressum').style = 'display: none';
+}
