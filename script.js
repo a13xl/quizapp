@@ -78,20 +78,28 @@ function nextQuestion() {
     questionNr++;
 
     if(questionNr >= questions.length){
+        updateProgressbar();
         opnEndScreen();
     } else {
         document.getElementById('nextQuestion').disabled = true;
         document.getElementById('answerInfoBtn').style = 'display: none;';
+        checkResultBtn();
         init();
     }
 }
 
 function updateProgressbar() {
     let progressBar = document.getElementById('progressBar');
-    let progress = (questionNr + 1) / questions.length * 100;
+    let progress = (questionNr) / questions.length * 100;
     progress = Math.round(progress);
     progressBar.innerHTML = `${progress}%`;
     progressBar.style = `width: ${progress}%;`;
+}
+
+function checkResultBtn() {
+    if(questionNr == (questions.length - 1)){
+        document.getElementById('nextQuestion').innerHTML = 'Ergebnis';
+    }
 }
 
 // ========== ANSWER INFO ==========
