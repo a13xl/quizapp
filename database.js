@@ -16,7 +16,7 @@ let questions = [
         'question': 'Wer hat das erste Microsoft Betriebssystem geschrieben?',
         'answers': ['Bill Gates', 'Tim Paterson', 'Gary Kildall', 'Paul Allen'],
         'right_answer': 2,
-        'answerDescription': '<b>Tim Paterson</b> entwickelte 1980, mit 24 Jahren, mit QDOS (Quick and Dirty Operating System) einen Nachbau von Gary Kildalls CP/M für die x86-Archetektur. Microsoft kaufte 1981 das Betriebssystem, taufte es in MSDOS um und entwickelte es weiter.'
+        'answerDescription': '<b>Tim Paterson</b> entwickelte 1980, mit 24 Jahren, mit QDOS (Quick and Dirty Operating System) einen Nachbau von Gary Kildalls CP/M für die x86-Architektur. Microsoft kaufte 1981 das Betriebssystem, taufte es in MSDOS um und entwickelte es weiter.'
     },
     {
         'question': 'Wer gilt als erste/r Ersteller/in von Computerprogrammen?',

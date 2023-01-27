@@ -99,6 +99,7 @@ function updateProgressbar() {
 function checkResultBtn() {
     if(questionNr == (questions.length - 1)){
         document.getElementById('nextQuestion').innerHTML = 'Ergebnis';
+		document.getElementById('nextQuestionInfo').innerHTML = 'Ergebnis';
     }
 }
 
