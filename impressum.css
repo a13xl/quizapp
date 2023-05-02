@@ -1,0 +1,11 @@
+h2 {
+    font-size: 1.1rem !important;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+h3 {
+    font-size: 1rem !important;
+    font-weight: bold;
+    text-decoration: underline;
+}

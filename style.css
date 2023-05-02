@@ -1,0 +1,126 @@
+body {
+    background-color: #104987 !important;
+    background-image: url(./img/background.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+
+.container {
+    min-height: 100vh;
+    background-color: transparent !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    color: white;
+}
+
+.answerCard {
+    gap: 0.4rem;
+}
+
+.quiz-card {
+    width: 30rem;
+}
+
+.quiz-card img {
+    height: 120px;
+    object-fit: cover;
+}
+
+.card-answer-option {
+    background-color: #6c757d !important;
+}
+
+.card-answer-option-hover:hover {
+    cursor: pointer;
+    background-color: #5c636a !important;
+}
+
+.question-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(108, 117, 125, 0.4);
+    padding-top: 12px;
+}
+
+.question-footer-btn {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30%;
+}
+
+.icon {
+    height: 40px !important;
+    cursor: pointer;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.progress {
+    margin-bottom: 12px;
+}
+
+/* ========== END CARD ========== */
+.endCardBody {
+    margin-bottom: 30px;
+}
+
+.endCardBody img{
+    height: 100px;
+    width: 103px;
+}
+
+/* ========== IMPRESSUM ========== */
+.impressum{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #212529;
+    z-index: 9;
+}
+
+.impressum-box {
+    height: 85%;
+    overflow-y: auto;
+}
+
+/* ========== FOR SMARTPHONES ========== */
+@media (max-width: 400px) {
+    body {
+        background-image: unset;
+    }
+
+    .container {
+        --bs-gutter-x: 0 !important;
+    }
+
+    .answer-info {
+        height: 50%;
+        overflow-y: auto;
+    }
+
+    .quiz-card {
+        height: 100vh !important;
+    }
+
+    .question-footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .question-footer-btn {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 29%;
+    }
+}
